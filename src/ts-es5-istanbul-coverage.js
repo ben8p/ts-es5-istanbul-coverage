@@ -1,3 +1,3 @@
 module.exports = function tsEs5IstanbulCoverage(content) {
-	return content.replace(/(return _super !== null)/g, '/* istanbul ignore next */$1');
+	return content.replace(/(\|\| this;)/g, '/* istanbul ignore next */$1');
 };
