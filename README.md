@@ -42,7 +42,7 @@ module.exports = {
 }
 ```
 
-## Current changes
+## Current fixes
 Currently the loader fix the branch coverage for the following:
 Emitted code like:
 ```
@@ -57,3 +57,19 @@ function MyClass() {
 }
 ```
 Which solves the coverage for the branch `|| this`
+
+Emitted code like:
+```
+function MyClass() {
+    return _this;
+    var _a, _b;
+}
+```
+will be replaced by
+```
+function MyClass() {
+    var _a, _b;
+    return _this;
+}
+```
+Which solves the coverage for the `var` statement
