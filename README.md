@@ -73,3 +73,17 @@ function MyClass() {
 }
 ```
 Which solves the coverage for the `var` statement
+
+Emitted code like:
+```
+for (var _i = 0; _i < arguments.length; _i++) {
+	dependencies[_i] = arguments[_i];
+}
+```
+will be replaced by
+```
+for (var _i = 0; _i < arguments.length; _i++) {/* istanbul ignore next */
+	dependencies[_i] = arguments[_i];
+}
+```
+Which solves the coverage for the loop body
