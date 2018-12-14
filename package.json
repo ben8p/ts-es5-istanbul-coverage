@@ -1,6 +1,6 @@
 {
   "name": "ts-es5-istanbul-coverage",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Make sure you don't miss branch coverage when outputing TypeScript as ES5 ",
   "main": "src/ts-es5-istanbul-coverage.js",
   "repository": "https://github.com/ben8p/ts-es5-istanbul-coverage",
